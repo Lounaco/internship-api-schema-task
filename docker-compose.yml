@@ -1,0 +1,22 @@
+version: '3'
+services:
+  db:
+    image: postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: school_service_development
+    ports:
+      - "5432:5432"
+  web:
+    build: .
+    command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -b '0.0.0.0'"
+    volumes:
+      - ".:/app"
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
+    environment:
+      RAILS_MASTER_KEY: c4a19036a0fa9272ecf1289f5132cece
+      RAILS_PRODUCTION_KEY: ce2cb99ce81fc844069274c1ebcd6c748609a297587713fde694baeabf34fb05
