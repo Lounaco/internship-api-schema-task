@@ -1,28 +1,18 @@
-<<<<<<< HEAD
-# school_service
-=======
-# README
+# School Service
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Overview
 
-Things you may want to cover:
+School Service is a Ruby on Rails application for managing school classes and students. This project is designed to provide a comprehensive platform for handling class schedules, student records, and more.
 
-* Ruby version
+## Features
 
-* System dependencies
+- Manage school classes and students
+- API integration
+- Docker support for development and deployment
 
-* Configuration
+## Requirements
 
-* Database creation
+- Ruby 3.1.2
+- Rails 7.x
+- PostgreSQL
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
->>>>>>> ec1549a (Initial commit)
